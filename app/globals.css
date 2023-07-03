@@ -75,4 +75,16 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  .adkar-page:before {
+    content: "";
+      background-image: url('/images/adkar.bg.jpg');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      @apply opacity-30;
+  }
 }
