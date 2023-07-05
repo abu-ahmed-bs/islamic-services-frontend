@@ -34,7 +34,7 @@ export default function DekrCard({item,itemCount,font}: DekrCardProps) {
     </CardContent>
     <hr />
     <CardFooter className='inset-x-0 bottom-0 m-3'>
-      <CountButton totalCount={item.count} />
+      
     </CardFooter>
   </Card>    
   );

@@ -6,7 +6,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { Amiri_Quran } from 'next/font/google'
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '../ui/card';
 import CountButton from './countButton';
-import { RefObject, useRef } from 'react';
+import { MutableRefObject, RefObject, useRef } from 'react';
 import { Badge } from '../ui/badge';
 
 const font = Amiri_Quran({ weight:'400', subsets: ['latin','arabic'],display:'swap' })
@@ -47,7 +47,7 @@ type DekrCarouselProps = {
 
 export default function DekrCarousel({items}: DekrCarouselProps) {
       
-    var carousel = useRef();
+    var carousel = useRef<Carousel>(null);
 
     return(
     <Carousel ref={carousel} rtl draggable={false} arrows={isTouchScreenDevice()} className='flex h-screen m-auto' responsive={responsive}>
