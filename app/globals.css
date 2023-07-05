@@ -1,11 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-
+ 
 @layer base {
   :root {
-    --background: white;
+    --background: 0 0% 10%;
     --foreground: 40 57% 83%;
  
     --muted: 60 4.8% 95.9%;
@@ -73,10 +72,7 @@
   * {
     @apply border-border;
   }
-
-
   body {
-    
     @apply bg-background text-foreground;
   }
 

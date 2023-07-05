@@ -8,32 +8,27 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import CountButton from "./countButton";
-import { Badge } from "../ui/badge";
-import { Separator } from "@radix-ui/react-separator";
 
 
 type DekrCardProps = {
   item: any,
-  itemCount: number,
-  font:any
 }
 
 
 
-export default function DekrCard({item,itemCount,font}: DekrCardProps) {
+export default function DekrCard({item}: DekrCardProps) {
 
   
   return(
-    <Card className={`relative flex flex-col w-screen h-screen m-4 mx-auto rounded-none bg-slate-100 bg-opacity-20 md:bg-white md:w-2/3 md:h-80 md:rounded-md`}>
+    <Card className='m-4 bg-[#2D4263] text-[#ECDBBA]'>
     <CardHeader>
-      <CardTitle className="flex flex-row gap-2"><Badge className="self-center">{itemCount}</Badge>{item.category}</CardTitle>
-      {item.description && <CardDescription>{item.description}</CardDescription>}
+      <CardTitle className='text-[#FFD966]'>{item.category}</CardTitle>
+      {item.description && <CardDescription className='text-[#FFD966]'>{item.description}</CardDescription>}
     </CardHeader>
-    <CardContent className={`h-full ${font.className}`}>
-      <p className='text-xl'>{item.content}</p>
+    <CardContent>
+      <p>{item.content}</p>
     </CardContent>
-    <hr />
-    <CardFooter className='inset-x-0 bottom-0 m-3'>
+    <CardFooter>
       <CountButton totalCount={item.count} />
     </CardFooter>
   </Card>    

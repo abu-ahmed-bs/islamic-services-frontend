@@ -18,7 +18,7 @@ async function getData() {
 export default async function Adkar(){
     const data = await getData();
     return (
-        <div className="h-screen adkar-page">
+        <div className="adkar-page h-screen">
            <DekrCarousel items={data.dekirs} />
         </div>
     );

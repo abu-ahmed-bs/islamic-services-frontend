@@ -2,27 +2,18 @@
 
 import { useState } from "react";
 import { Button } from "../ui/button";
-import Carousel from "react-multi-carousel";
 
 
 type CountButtonProps = {
     totalCount: number,
     label?: string,
-    variant?:string,
-    carouselRef?: any
+    variant?:string
   }
 
-export default function CountButton({totalCount,label,variant,carouselRef}: CountButtonProps) {
+export default function CountButton({totalCount,label,variant}: CountButtonProps) {
     const [count,setCount] = useState(totalCount);
   
-    function updateCount(){
-      if(count > 0 ) { setCount(count -1) }  
-
-      if((count-1) === 0) {  
-        carouselRef.current.next();
-      }
-    }
     return(
-        <Button onClick={updateCount}> {count} تكرار</Button>
+        <Button onClick={ () => count >0 ? setCount(count -1): setCount(count)}>{count} تكرار</Button>
     );
   }
