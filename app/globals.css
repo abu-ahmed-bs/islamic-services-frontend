@@ -77,8 +77,12 @@
 
   body {
     
-    @apply bg-background text-foreground;
+    @apply text-foreground;
+    @apply bg-no-repeat;
+    background: linear-gradient(hsla(0, 0%, 100%, 0.665), rgba(255, 255, 255, 0.233)), url(/images/adkar.bg.jpg);
+    background-size: cover;
   }
+
 
   .adkar-page:before {
     content: "";
