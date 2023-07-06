@@ -1,4 +1,6 @@
+import Loading from "@/app/loading";
 import DekrCarousel from "@/components/client/dekrCarousel";
+import { Suspense } from "react";
 
 export const metadata = {
   title: 'أذكاري | أذكار المساء',
@@ -23,7 +25,9 @@ export default async function Adkar(){
     const data = await getData();
     return (
         <div className="h-screen">
-           <DekrCarousel items={data.dekirs} />
+          <Suspense fallback={<Loading />}>
+            <DekrCarousel items={data.dekirs} />
+          </Suspense>
         </div>
     );
 }
