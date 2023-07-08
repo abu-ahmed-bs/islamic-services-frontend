@@ -6,7 +6,7 @@ export const metadata = {
 }
 async function getData() {
 
-    const res = await fetch('http://localhost:3000/api/adkar/morning')
+    const res = await fetch('http://127.0.0.1:3000/api/adkar/morning')
     // The return value is *not* serialized
     // You can return Date, Map, Set, etc.
    

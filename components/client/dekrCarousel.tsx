@@ -55,7 +55,7 @@ export default function DekrCarousel({items}: DekrCarouselProps) {
             items.map( (item: any,index:number) => (
               <Card key={item.id} className={`relative flex flex-col w-screen mx-auto rounded-none bg-slate-100 bg-opacity-20 h-screen  md:bg-white md:w-2/3 md:h-80 md:rounded-md`}>
                 <CardHeader>
-                  <CardTitle className="flex flex-row gap-2"><Badge className="self-center">{index + 1}/ {items.length}</Badge>{item.category}</CardTitle>
+                  <CardTitle className="flex flex-row gap-2 text-[1.1rem]"><Badge className="self-center">{index + 1}/ {items.length}</Badge>{item.category}</CardTitle>
                   {item.description && <CardDescription>{item.description}</CardDescription>}
                 </CardHeader>
                 <CardContent className={`h-3/5
